@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn About Background Images</title>
-
   <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -19,40 +18,36 @@
     <p>The background image feature in CSS is made up of five main elements. Those elements are
       background-image, background-position, background-size, background-attachment. The
       following CodePen shows an example of each element being used properly:</p>
-
     <h2> Background Image Basics </h2>
     <p> This is the generic way to add a background image to your webpage. Make sure you put it in a body tag (not a
       body bag) and start with "background-image:" then reference your desired image (whether its a url link, img,
       etc). The other elements will be explained below.
     </p>
-    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="KKBJoZG" data-user="Adammross1"
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="KKBJoZG" data-user="Adammross1"
       style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
       <span>See the Pen <a href="https://codepen.io/Adammross1/pen/KKBJoZG">
           Untitled</a> by Adam Ross (<a href="https://codepen.io/Adammross1">@Adammross1</a>)
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
-
     <h2>Background Image: Cover vs. Specified Size</h2>
     <!-- Adam's Code Pen - No-Cover Background Image-->
     <p>This is an example of a background image without the size set to "cover." Not only is it not taking up the full
       space, but the image doesn't adjust its size when you shrink the page. Be careful if your image is very small and
       you want it to cover a very large space, it will become very pixelated.</p>
-
-    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGjzvxK" data-user="Adammross1"
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="bGjzvxK" data-user="Adammross1"
       style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
       <span>See the Pen <a href="https://codepen.io/Adammross1/pen/bGjzvxK">
           Untitled</a> by Adam Ross (<a href="https://codepen.io/Adammross1">@Adammross1</a>)
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
     <!-- Adam's Code Pen - Repeat Background Image -->
     <h2> Background Image: Repeating</h2>
     <!-- Adam, use this background image for repeating - it may be a better example than the mountains
       background-image: url(paper.gif) -->
     <p>This is an example of a background image repeating. This option is typically best for a generic background rather
       than a picture. this can be used instead of the "cover" option so it is not as pixelated.</p>
-    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJwdvwz" data-user="Adammross1"
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="OJwdvwz" data-user="Adammross1"
       style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
       <span>See the Pen <a href="https://codepen.io/Adammross1/pen/OJwdvwz">
           Untitled</a> by Adam Ross (<a href="https://codepen.io/Adammross1">@Adammross1</a>)
@@ -60,14 +55,57 @@
     </p>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
     <h2> Background Attachments </h2>
-    <!-- pls help -->
-
+    <p>
+      The background-attachment property in CSS specifies how to move the background relative to the viewport.
+      There are three values: <b>scroll, fixed, and local.</b> The best way to explain this is via demo (try scrolling
+      the individual backgrounds).
+      There are two different views to think about when talking about background-attachment:
+      the <b>main view</b> (browser window),
+      and the <b>local view</b> (you can see this in the demo below).
+    </p>
+    <br>
+    <h3>Scroll</h3>
+    <p>scroll is the default value. It scrolls with the main view, but stays fixed inside the local view.</p>
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="MWBvKYO"
+      data-user="petertaoyang"
+      style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/petertaoyang/pen/MWBvKYO">
+          Untitled</a> by Tao (<a href="https://codepen.io/petertaoyang">@petertaoyang</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <h3>Fixed</h3>
+    <p>
+      fixed stays fixed no matter what.
+      It’s kind of like a physical window: moving around the window changes your perspective,
+      but it doesn’t change where things are outside of the window.
+    </p>
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="mdjoJLb"
+      data-user="petertaoyang"
+      style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/petertaoyang/pen/mdjoJLb">
+          background-attachment: fixed</a> by Tao (<a href="https://codepen.io/petertaoyang">@petertaoyang</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <h3>Local</h3>
+    <p>
+      local was invented because the default scroll value acts like a fixed background. It scrolls both with the main
+      view and the local view.
+    </p>
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="MWBvKYO"
+      data-user="petertaoyang"
+      style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/petertaoyang/pen/MWBvKYO">
+          Untitled</a> by Tao (<a href="https://codepen.io/petertaoyang">@petertaoyang</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <h2>Background Origin</h2>
     <p>Background Origin is what defines where the image will be placed on the screen. By default, the top left corner
       of the image will be placed in the top left-most available position. However, This can be altered.</p>
-    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOpJEyo"
+    <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="jOpJEyo"
       data-user="Brechristian"
       style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
       <span>See the Pen <a href="https://codepen.io/Brechristian/pen/jOpJEyo">
@@ -75,7 +113,6 @@
         on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
   </main>
 </body>
 
